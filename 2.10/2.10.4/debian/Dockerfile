@@ -38,7 +38,7 @@ RUN buildDeps="dpkg-dev gcc libbz2-dev libc6-dev libjpeg62-turbo-dev libopenjp2-
  && pip install -r requirements.txt \
  && cd /castle/instance \
  && mkdir products \
- && buildout \
+ && buildout -vvv \
  && ln -s /data/filestorage/ /castle/instance/var/filestorage \
  && ln -s /data/blobstorage /castle/instance/var/blobstorage \
  && chown -R castle:castle /castle /data \
